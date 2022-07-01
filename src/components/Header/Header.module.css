@@ -1,0 +1,47 @@
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333336;
+    padding: 8px;
+    font-family: Arial, sans-serif;
+}
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.item a {
+    color: #fdfdfe;
+    text-align: center;
+}
+
+.item {
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-right: 30px;
+}
+.logo {
+    margin-left: 60px;
+}
+.item:hover {
+    background-color: #45464a;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+.creatPost {
+    padding: 8px;
+    background-color: rgb(122, 122, 122);
+    margin: 8px 0px 4px 0px;
+    border-radius: 4px;
+}
+.text {
+    font-size: 28px;
+}
+.button__post {
+    padding: 6px 18px 6px 18px;
+}
