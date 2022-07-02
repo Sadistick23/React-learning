@@ -8,9 +8,9 @@
     grid-template-areas:
   "avatar info";
     grid-template-rows: auto auto;
-    grid-template-columns: 4fr 8fr;
+    grid-template-columns: 3fr 9fr;
 }
-.users {
+.users__list {
     margin: 8px 8px 4px 0px;
     padding: 8px;
     border-radius: 4px;
@@ -21,4 +21,7 @@
     padding: 8px;
     border-radius: 4px;
     background-color: #7a7a7a;
+}
+.user__message {
+
 }

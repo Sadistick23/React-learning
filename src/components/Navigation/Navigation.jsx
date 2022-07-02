@@ -1,17 +1,28 @@
 import React, {Component} from "react";
 import '../../App.css';
 import nav from './Navigation.module.css';
+import {NavLink} from "react-router-dom";
 
 
 const Navigation = () => {
     return (
         <nav className={nav.nav}>
             <div className={nav.nav__border}>
-                <div className={`${nav.design_button} ${nav.nav__link}`}><a href="#">Profile</a></div>
-                <div className={`${nav.design_button} ${nav.nav__link}`}><a href="#">Messages</a></div>
-                <div className={`${nav.design_button} ${nav.nav__link}`}><a href="#">Music</a></div>
-                <div className={`${nav.design_button} ${nav.nav__link}`}><a href="#">News</a></div>
-                <div className={`${nav.design_button} ${nav.nav__link}`}><a href="#">Settings</a></div>
+                <NavLink to="/profile" className={navData => navData.isActive ? nav.active : nav.nav__link}>
+                    <div className={nav.design}>Profile</div>
+                </NavLink>
+                <NavLink to="/dialogs" className={navData => navData.isActive ? nav.active : nav.nav__link}>
+                    <div className={nav.design}>Messages</div>
+                </NavLink>
+                <NavLink to="/music" className={navData => navData.isActive ? nav.active : nav.nav__link}>
+                    <div className={nav.design}>Music</div>
+                </NavLink>
+                <NavLink to="/news" className={navData => navData.isActive ? nav.active : nav.nav__link}>
+                    <div className={nav.design}>News</div>
+                </NavLink>
+                <NavLink to="/settings" className={navData => navData.isActive ? nav.active : nav.nav__link}>
+                    <div className={nav.design}>Settings</div>
+                </NavLink>
             </div>
         </nav>
     )

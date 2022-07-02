@@ -1,24 +1,30 @@
 .nav {
     grid-area: nav;
     padding: 20px;
-    background-color: #222226;
+    background-color: rgba(34, 34, 38, 0.5);
 }
 .nav__border {
     padding: 8px;
     background-color: rgba(122, 122, 122, 0.4);
     border-radius: 6px;
 }
-
-.design_button {
-    margin: 2px 0px 2px 0px;
-    padding: 5px;
-}
-
-.nav__link a {
+.nav__link{
     color: #fdfdfe;
 }
-
-.nav__link:hover {
-    background-color: #333336;
+.design {
+    padding: 8px;
+}
+.design:hover {
+    background-color: rgba(30, 31, 31, 0.5);
     border-radius: 6px;
+}
+.active {
+    background-color: rgb(30, 31, 31);
+    border-radius: 6px;
+    color: #fdfdfe;
+}
+.active .design{
+    background-color: rgba(30, 31, 31, 0.2);
+    border-radius: 6px;
+    padding: 8px 8px 8px 16px;
 }
