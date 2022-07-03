@@ -1,0 +1,13 @@
+.container {
+    margin: 16px;
+}
+.msg__text {
+    background-color: rgba(137, 160, 175, 0.3);
+    margin-right: 40%;
+    padding: 8px;
+    border-radius: 12px;
+}
+#my {
+    color: #FFFFFF;
+    text-align: end;
+}

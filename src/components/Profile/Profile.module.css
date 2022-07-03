@@ -1,38 +1,4 @@
 .content {
-    background-color: #333336;
-    padding: 24px;
-    margin: 20px 240px 0px 30px;
+    margin: 10px;
 }
-
-.contentHeader img {
-    max-width: 60%;
-    height: 100%;
-    margin: 8px 0px 4px 0px;
-    background-color: #7a7a7a;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-.userinfo {
-    display: grid;
-
-    grid-template-areas:
-  "avatar info";
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 11fr;
-}
-
-.avatar {
-    grid-area: avatar;
-    padding: 8px;
-    background-color: #7a7a7a;
-    margin: 8px 0px 4px 0px;
-    border-radius: 4px;
-}
-
-.avatar img {
-    max-width: 100%;
-}
-
-
 

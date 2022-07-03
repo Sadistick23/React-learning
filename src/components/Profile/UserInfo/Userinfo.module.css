@@ -1,9 +1,36 @@
+.user__content {
+
+}
 .user__info {
-    grid-area: info;
+    display: grid;
+
+    grid-template-areas:
+  "avatar info";
+    grid-template-rows: auto auto;
+    grid-template-columns: 0fr 12fr;
+
     padding: 8px;
-    margin: 8px 0px 4px 8px;
+    margin: 8px 0px 4px 0px;
     background-color: #7a7a7a;
     border-radius: 4px;
+}
+.user__ui {
+    grid-area: avatar;
+    padding: 8px;
+    background-color: #7a7a7a;
+    border-radius: 6px;
+}
+.user__container {
+    padding-left: 8px;
+    grid-area: info;
+}
+.user__image img {
+    width: 50%;
+    height: 50%;
+}
+.user__avatar img {
+    width: 60px;
+    height: 60px;
 }
 .user__name {
     font-size: 18px;

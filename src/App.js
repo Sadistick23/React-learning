@@ -11,7 +11,9 @@ import Settings from "./components/Settings/Settings";
 import {Route, Routes} from "react-router-dom";
 
 
-const App = () => {
+
+
+const App = (props) => {
     return (
         <div className={'app-wrapper'}>
             <Header/>
@@ -19,8 +21,8 @@ const App = () => {
             <div className={'app-wrapper-content'}>
                 <Routes>
                     <Route path="/music" element={<Music/>}/>
-                    <Route path="/profile" element={<Profile/>}/>
-                    <Route path="dialogs/*" element={<Dialogs/>}/>
+                    <Route path="/profile" element={<Profile state={ props.state.PostPage }/>}/>
+                    <Route path="dialogs/*" element={<Dialogs state={ props.state.MessagesPage }/>}/>
                     <Route path="/news" element={<News/>}/>
                     <Route path="/settings" element={<Settings/>}/>
                 </Routes>
