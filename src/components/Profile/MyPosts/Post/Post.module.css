@@ -22,3 +22,28 @@
     border-radius: 4px;
     background-color: #656565;
 }
+.button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 12fr;
+
+    padding: 8px 0px 8px 0px;
+}
+.button__style {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+
+    background-color: rgba(51, 51, 54, 0.4);
+    border-radius: 20px;
+    grid-area: like;
+    margin-right: 10px;
+}
+.button__style img {
+    padding: 7px 8px 8px 12px;
+    width: 24px;
+    height: 24px;
+}
+.count {
+    padding: 9px 10px 10px 0px;
+    font-size: 14px;
+    color: #fdfdfe;
+}

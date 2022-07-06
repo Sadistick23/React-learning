@@ -7,13 +7,12 @@ import Userinfo from "./UserInfo/Userinfo";
 
 const Profile = (props) => {
 
-
     //Post
-    let PostElement = props.state.PostData.map ( post => <Post namePost={post.namePost} description={post.description} images={post.images} /> )
+    let PostElement = props.state.PostData.map ( post => <Post namePost={post.namePost} description={post.description} images={post.images} LikeCount={post.LikeCount} CommentCount={post.CommentCount} RepostCount={post.RepostCount} /> )
 
     return (
             <main className={classes.content}>
-                <Userinfo name='Me_Ariku' age='21' descriptions='I am coder!'/>
+                <Userinfo name='Me_Ariku' age='21' descriptions='I am a coder!' />
                 <CreatePost />
                 <div>
                     { PostElement }

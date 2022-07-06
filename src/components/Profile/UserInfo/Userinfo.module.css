@@ -18,7 +18,7 @@
     grid-area: avatar;
     padding: 8px;
     background-color: #7a7a7a;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 .user__container {
     padding-left: 8px;

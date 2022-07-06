@@ -1,10 +1,16 @@
 import React from "react";
 import news from "./News.module.css"
+import NewsPost from "./NewsPost/NewsPost";
+import MusicPattern from "../Music/MusicContent/MusicPattern";
 
-const News = () => {
+const News = (props) => {
+
+    let NewsElement = props.state.NewsData.map ( news => <NewsPost AvatarGroup={ news.AvatarGroup } GroupsName={ news.GroupsName } Date={ news.Date } Description={ news.Description } ContentImage1={ news.ContentImage1 } ContentImage2={ news.ContentImage2 } ContentImage3={ news.ContentImage3 } ContentImage4={ news.ContentImage4 } ContentImage5={ news.ContentImage5 } ContentImage6={ news.ContentImage6 } PostAuthor={ news.PostAuthor } LikeCount={ news.LikeCount } CommentCount={ news.CommentCount } RepostCount={ news.RepostCount } /> )
+
+
     return (
         <div className={news.container}>
-            <h1>News</h1>
+            { NewsElement }
         </div>
     )
 }

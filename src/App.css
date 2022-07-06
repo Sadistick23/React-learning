@@ -14,11 +14,11 @@ a {
     background-color: #222226;
 
     grid-template-areas:
-  "header header"
-  "nav content"
-  "footer footer";
+  "header header header"
+  "nav content content"
+  "footer footer footer";
     grid-template-rows: auto 1fr;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 2fr 8fr 2fr;
 }
 
 .app-wrapper-content {

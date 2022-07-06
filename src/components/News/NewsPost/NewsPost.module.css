@@ -1,0 +1,118 @@
+.container {
+
+}
+.content {
+    background-color: #454548 ;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.content__header {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+
+    padding: 20px 0px 0px 20px;
+}
+.news__avatar img {
+    grid-area: avatar;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.news__name a {
+    grid-area: name;
+    font-size: 18px;
+    color: rgb(253, 253, 254);
+}
+.news__date {
+    grid-area: date;
+    font-size: 16px;
+    color: #989898;
+}
+.content__main {
+    padding: 5px 20px 20px 20px;
+}
+.content__description {
+    margin-bottom: 10px;
+    color: #fdfdfe;
+}
+.content__images {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 8px;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content__images1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.content__images2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.content__images3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.content__images4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+.content__images5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.content__images6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.container__footer {
+
+}
+.authornews {
+
+}
+.authornews a {
+    color: #fdfdfe;
+}
+.button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 12fr;
+
+    padding: 8px 0px 8px 0px;
+}
+.button__style {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+
+    background-color: rgba(51, 51, 54, 0.4);
+    border-radius: 20px;
+    grid-area: like;
+    margin-right: 10px;
+}
+.button__style img {
+    padding: 7px 8px 8px 12px;
+    width: 24px;
+    height: 24px;
+}
+.count {
+    padding: 9px 10px 10px 0px;
+    font-size: 14px;
+    color: #fdfdfe;
+}
