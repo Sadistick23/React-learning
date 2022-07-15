@@ -1,7 +1,11 @@
 .container {
     margin: 10px;
+    overflow-wrap: break-word;
+    position: relative
 }
 .msg__text {
-    background-color: rgba(137, 160, 175, 0.3);
+    margin: 3px;
     border-radius: 12px;
+    white-space: pre-line;
+    overflow-wrap: break-word;
 }

@@ -1,7 +1,7 @@
 .container {
-    background-color: #333336;
-    padding: 24px;
-    margin: 20px 240px 0px 30px;
+    /*background-color: #333336;*/
+    padding: 0px 10px 10px 10px;
+    margin: 30px 344px 32px 80px;
 
     display: grid;
 
@@ -11,10 +11,10 @@
     grid-template-columns: 3fr 9fr;
 }
 .users__list {
-    margin: 8px 8px 4px 0px;
+    margin: 8px 8px 0px 0px;
     padding: 8px;
     border-radius: 4px;
-    background-color: #7a7a7a;
+    background-color: #606060;
 }
 .messages {
     height: 500px;
@@ -22,7 +22,7 @@
     margin: 8px 0px 4px 0px;
     padding: 8px;
     border-radius: 4px;
-    background-color: #7a7a7a;
+    background-color: #606060;
 }
 .messages::-webkit-scrollbar {
     width: 0px;
@@ -32,7 +32,7 @@
     grid-template-columns: 12fr 1fr;
 
     width: 100%;
-    background: #7a7a7a;
+    background: #606060;
     border-radius: 5px;
     padding: 10px 0px 10px 0px;
 }
@@ -42,12 +42,23 @@
     width: 96%;
     max-height: 330px;
     height: 60px;
-    font-size: 18px;
-    background-color: #989898;
+    font-size: 15px;
+    color: rgba(253, 253, 254, 0.8);
+    background-color: #777777;
     border-radius: 8px;
     outline: none;
     resize: none;
     border-color: rgba(34, 34, 38, 0.4);
+    cursor: pointer;
+}
+.messages__textarea::-webkit-input-placeholder {
+    color: rgba(234, 234, 234, 0.7);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding-top: 2px;
+}
+.messages__textarea:hover {
+    cursor: pointer;
 }
 textarea:is(:focus, :valid) {
     border-width: 1px;
@@ -56,13 +67,17 @@ textarea:is(:focus, :valid) {
 textarea::-webkit-scrollbar {
     width: 0px;
 }
+textarea {
+    cursor: pointer;
+}
 .messages__button {
     border-radius: 8px;
-    margin: 6px 10px 6px 0px;
-    padding: 15px 0px 0px 0px;
+    margin: 3px 2px 0px 0px;
+    padding: 4px 0px 0px 0px;
     text-align: center;
+    cursor: pointer;
 }
 .messages__button img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }

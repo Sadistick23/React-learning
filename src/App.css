@@ -3,13 +3,13 @@
     padding: 0;
     text-decoration:none;
 }
-a {
-    text-decoration:none;
+*::-webkit-scrollbar {
+    width: 0px;
 }
-
 .app-wrapper {
     display: grid;
     min-height: 100%;
+    height: auto;
     background-color: #222226;
 
     grid-template-areas:

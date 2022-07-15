@@ -11,16 +11,17 @@
 
     padding: 8px;
     margin: 8px 0px 4px 0px;
-    background-color: #7a7a7a;
+    background-color: #333336;
     border-radius: 4px;
 }
 .user__ui {
     grid-area: avatar;
     padding: 8px;
-    background-color: #7a7a7a;
+    background-color: #333336;
     border-radius: 4px;
 }
 .user__container {
+    color: #fdfdfe;
     padding-left: 8px;
     grid-area: info;
 }

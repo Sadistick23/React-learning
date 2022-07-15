@@ -1,51 +1,36 @@
-import React, {Component, useEffect} from "react";
+import React from "react";
 import dialogs from './Dialogs.module.css';
 import Users from "./Users/Users";
 import Messages from "./Messages/Messages";
 import TextareaAutosize from 'react-textarea-autosize';
-import {addMessageActionCreater, updateNewMessageTextActionCreater} from "../../Redux/State";
 
-
-
-const Dialogs = (props) => {
+const Dialogs = (state) => {
 
     let newMessageElement = React.createRef();
 
-    let addMessage = () => {
-        if ( props.state.MessageElement.newMessageText === '' ) {
-            alert( "Message clear" )
-        } else {
-            props.dispatch( addMessageActionCreater() );
+    let MessageElements = state.MessageData.map ( message => <Messages msg={message.msg} who={message.who}/>)
+    let UsersElements = state.UsersData.map ( user => <Users name={user.name} id={user.id} avatar={user.avatar}/>)
+
+
+    let onSendMessageClick = () => {
+        state.sendMessage();
+    }
+
+    let onMessageChange = (event) => {
+        let body = event.target.value;
+        state.updateNewMessageBody(body);
+    }
+
+    let onEnterPress = (event) => {
+        if (event.keyCode === 13 && event.shiftKey === false) {
+            event.preventDefault();
+            if ( state.MessageElement.newMessageText === '' ) {
+                alert( "Message clear" )
+            } else {
+                state.sendMessage();
+            }
         }
     }
-
-    let onMessageChange = () => {
-        let text = newMessageElement.current.value;
-        let action = updateNewMessageTextActionCreater(text);
-        props.dispatch(action);
-    }
-
-    useEffect(() => {
-        const listener = event => {
-            if (event.code === "Enter" && !event.shiftKey || event.code === "NumpadEnter" ) {
-                event.preventDefault();
-                if ( props.state.MessageElement.newMessageText === '' ) {
-                    alert( "Message clear" )
-                } else {
-                    props.dispatch( addMessageActionCreater() );
-                }
-            }
-        };
-        document.addEventListener("keydown", listener);
-        return () => {
-            document.removeEventListener("keydown", listener);
-        };
-    }, []);
-
-    //Messages
-    let MessageElements = props.state.MessageData.map ( message => <Messages msg={message.msg} who={message.who}/>)
-    //Users
-    let UsersElements = props.state.UsersData.map ( user => <Users name={user.name} id={user.id} avatar={user.avatar}/>)
 
     return (
         <div className={dialogs.container}>
@@ -57,13 +42,14 @@ const Dialogs = (props) => {
                     <div>{MessageElements}</div>
                 </div>
                 <div className={dialogs.messages__textarea_container}>
-                    <TextareaAutosize minRows={3} maxRows={10}
+                    <TextareaAutosize minRows={1} maxRows={6}
                                       ref={newMessageElement}
                                       className={dialogs.messages__textarea}
                                       onChange={onMessageChange}
-                                      value={ props.state.MessageElement.newMessageText }
+                                      onKeyDown={onEnterPress}
+                                      value={ state.MessageElement.newMessageText }
                                       placeholder="Write message..." required/>
-                    <a className={dialogs.messages__button} href="#" onClick={ addMessage }><img src="https://img.icons8.com/material-outlined/344/filled-sent.png"/></a>
+                    <a className={dialogs.messages__button} onClick={ onSendMessageClick }><img src="https://img.icons8.com/material-outlined/344/filled-sent.png"/></a>
                 </div>
             </div>
         </div>

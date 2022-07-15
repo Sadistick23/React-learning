@@ -1,9 +1,19 @@
 .you {
-    text-align: left;
+    float:left;
+    clear:both;
     padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    background-color: rgba(93, 175, 231, 0.3);
+    max-width: 500px;
 }
 .my {
-    text-align: right;
+    max-width: 500px;
+    float:right;
+    clear:both;
     padding: 10px;
     color: #e1e8ec;
+    background-color: rgba(133, 239, 197, 0.3);
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }

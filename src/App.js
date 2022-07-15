@@ -1,30 +1,31 @@
 import React, {Component} from "react";
 import './App.css';
 import Header from "./components/Header/Header";
-import Navigation from "./components/Navigation/Navigation";
+import NavigationContainer from "./components/Navigation/NavigationContainer";
 import Profile from "./components/Profile/Profile";
-import Footer from "./components/Footer/Footer";
-import Dialogs from "./components/Dialogs/Dialogs";
-import Music from "./components/Music/Music";
-import News from "./components/News/News"
+import MusicContainer from "./components/Music/MusicContainer";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import NewsContainer from "./components/News/NewsContainer";
 import Settings from "./components/Settings/Settings";
+import Footer from "./components/Footer/Footer";
 import {Route, Routes} from "react-router-dom";
+
 
 const App = (props) => {
     return (
         <div className={'app-wrapper'}>
             <Header/>
-            <Navigation state={ props.state.FriendsPage }/>
+            <NavigationContainer />
             <div className={'app-wrapper-content'}>
                 <Routes>
-                    <Route path="/music" element={<Music state={ props.state.MusicPage } />}/>
-                    <Route path="/profile" element={<Profile PostPage={ props.state.PostPage } dispatch={ props.dispatch }/>}/>
-                    <Route path="dialogs/*" element={<Dialogs state={ props.state.MessagesPage } dispatch={ props.dispatch }/>}/>
-                    <Route path="/news" element={<News  state={ props.state.NewsPage }/>}/>
-                    <Route path="/settings" element={<Settings/>}/>
+                    <Route path="/music" element={<MusicContainer />}/>
+                    <Route path="/profile" element={<Profile />}/>
+                    <Route path="dialogs/*" element={<DialogsContainer />}/>
+                    <Route path="/news" element={<NewsContainer />}/>
+                    <Route path="/settings" element={<Settings />}/>
                 </Routes>
             </div>
-            <Footer/>
+            {/*<Footer/>*/}
         </div>
     )
 }

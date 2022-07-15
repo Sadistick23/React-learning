@@ -1,15 +1,39 @@
 .creatPost {
     padding: 8px;
-    background-color: rgb(122, 122, 122);
+    background-color: #333336;
     margin: 8px 0px 4px 0px;
     border-radius: 4px;
 }
-.textarea {
-
-}
 .text {
     font-size: 28px;
+    color: #fdfdfe;
+}
+
+.textarea {
+    padding: 10px;
+    border-color: #333336;
+    color: #fdfdfe;
+
+    margin: 5px 0px 5px 0px;
+    width: 40%;
+    height: 60px;
+    font-size: 18px;
+    background-color: #444446;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    border-color: rgba(34, 34, 38, 0.4);
+}
+.textarea::-webkit-scrollbar {
+    width: 0px;
 }
 .button__post {
-    padding: 6px 18px 6px 18px;
+    padding: 8px 20px 8px 20px;
+    border-radius: 8px;
+    background-color: #666666;
+    border: none;
+    color: #fdfdfe;
+}
+.button__post:hover {
+    background-color: #838383;
 }

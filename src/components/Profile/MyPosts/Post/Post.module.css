@@ -1,38 +1,36 @@
 .post {
     font-size: 32px;
-    padding: 8px;
-    background-color: #7a7a7a;
+    padding: 20px;
+    background-color: #333336;
     margin: 8px 0px 4px 0px;
     border-radius: 4px;
 }
 .namepost {
-    font-size: 26px;
+    font-size: 20px;
+    color: #fafafa;
 }
 .description {
     padding: 8px 0px 8px 0px;
-    font-size: 18px;
+    font-size: 14px;
+    color: #fdfdfe;
 }
 .image {
     border-radius: 4px;
 }
 .image img {
-    padding: 12px;
     width: 40%;
     height: 40%;
-    border-radius: 4px;
-    background-color: #656565;
 }
 .button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 12fr;
-
     padding: 8px 0px 8px 0px;
 }
 .button__style {
     display: grid;
     grid-template-columns: 1fr 12fr;
 
-    background-color: rgba(51, 51, 54, 0.4);
+    background-color: #444446;
     border-radius: 20px;
     grid-area: like;
     margin-right: 10px;
