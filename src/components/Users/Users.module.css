@@ -1,0 +1,56 @@
+.container {
+    /*background-color: #333336;*/
+    padding: 10px 10px 10px 10px;
+    margin: 30px 344px 32px 80px;
+}
+.content {
+    /*background-color: #454548;*/
+    border-radius: 4px;
+    margin-top: 5px;
+    /*padding: 1px 10px 10px 10px;*/
+}
+.user__item {
+    margin: 5px;
+    border-radius: 4px;
+    background-color: #333336;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+}
+.user__avatar {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.user__item_img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.user__item_img img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.user__description {
+    padding-left: 15px;
+}
+.user__name {
+    padding-bottom: 3px;
+    color: #fdfdfe;
+}
+.user__status {
+    color: rgba(109, 127, 138, 0.85);
+}
+.follow {
+
+}
+.follow__button {
+    border: none;
+    padding: 4px 10px 4px 10px;
+    border-radius: 4px;
+    background-color: #222226;
+    color: #fdfdfe;
+}
+.follow__button:hover {
+    cursor: pointer;
+}

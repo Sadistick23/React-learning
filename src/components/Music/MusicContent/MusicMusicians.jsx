@@ -3,13 +3,14 @@ import music from "../Music.module.css";
 import MusicPattern from "./MusicPattern";
 
 const MusicMusicians = (state) => {
-    debugger
     let PlaylistElement = state.musicPlaylistData.map(music => <MusicPattern Author={music.Author}
                                                                              NameMusic={music.NameMusic}
-                                                                             images={music.images}/>)
+                                                                             images={music.images}
+                                                                             key={music.id}/>)
     let AuthorElement = state.musicAuthorData.map(music => <MusicPattern Author={music.Author}
                                                                          NameMusic={music.NameMusic}
-                                                                         images={music.images}/>)
+                                                                         images={music.images}
+                                                                         key={music.id}/>)
 
     return (
         <div className={music.container}>

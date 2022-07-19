@@ -4,13 +4,15 @@ import messageReducer from "./message-reducer";
 import newsReducer from "./news-reducer";
 import musicReducer from "./music-reducer";
 import friendsReducer from "./friends-reducer";
+import usersReducer from "./users-reducer";
 
 let reducers = combineReducers({
     PostPage: postReducer,
     MessagesPage: messageReducer,
     NewsPage: newsReducer,
     MusicPage: musicReducer,
-    FriendsPage: friendsReducer
+    FriendsPage: friendsReducer,
+    UsersPage: usersReducer
 });
 
 let store = createStore(reducers);

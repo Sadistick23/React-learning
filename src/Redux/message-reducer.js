@@ -35,26 +35,24 @@ let initializationState = {
             avatar: 'https://igra4.ru/wp-content/uploads/2019/12/4675e38ad2a7ce99b0627bec81823772.png'
         },
     ],
-    MessageElement: {
-        newMessageText: ''
-    }
+    newMessageText: '',
 }
 
 const messageReducer = (state = initializationState, action) => {
-
     switch (action.type) {
         case ADD_MESSAGE:
-            let newMessage = {
-                id: 5,
-                who: "my",
-                msg: state.MessageElement.newMessageText
+            let body = state.newMessageText;
+            return  {
+                ...state,
+                newMessageText: '',
+                MessageData: [...state.MessageData, { id: 5, who: "my", msg: body}],
             };
-            state.MessageData.push(newMessage);
-            state.MessageElement.newMessageText = '';
-            return state;
         case UPDATE_NEW_MESSAGE_TEXT:
-            state.MessageElement.newMessageText = action.newText;
-            return state;
+            return  {
+                ...state,
+                MessageData: [...state.MessageData],
+                newMessageText: action.newText,
+            };
         default:
             return state;
     }

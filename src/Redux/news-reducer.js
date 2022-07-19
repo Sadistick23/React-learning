@@ -18,7 +18,7 @@ let initializationState = {
             RepostCount: '34'
         },
         {
-            id: 1,
+            id: 2,
             AvatarGroup: 'https://sun3.userapi.com/sun3-9/s/v1/ig2/wIJLiVxmtGCHkXooX3J3i_O2raIkt0FRZWfhUV_LjeFOe2zTC-bEP2j7yAXTPX6PVZBU1DFtFOwyJth8cwXenAKU.jpg?size=50x50&quality=96&crop=144,144,1152,1152&ava=1',
             GroupsName: 'твоя папка с сохранёнками',
             Description: 'Жарко становится...\n' + 'Не анонимно, пожалуйста.',
@@ -35,7 +35,7 @@ let initializationState = {
             RepostCount: '34'
         },
         {
-            id: 1,
+            id: 3,
             AvatarGroup: 'https://sun3.userapi.com/sun3-9/s/v1/ig2/wIJLiVxmtGCHkXooX3J3i_O2raIkt0FRZWfhUV_LjeFOe2zTC-bEP2j7yAXTPX6PVZBU1DFtFOwyJth8cwXenAKU.jpg?size=50x50&quality=96&crop=144,144,1152,1152&ava=1',
             GroupsName: 'твоя папка с сохранёнками',
             Description: 'Жарко становится...\n' + 'Не анонимно, пожалуйста.',
@@ -52,7 +52,7 @@ let initializationState = {
             RepostCount: '34'
         },
         {
-            id: 1,
+            id: 4,
             AvatarGroup: 'https://sun3.userapi.com/sun3-9/s/v1/ig2/wIJLiVxmtGCHkXooX3J3i_O2raIkt0FRZWfhUV_LjeFOe2zTC-bEP2j7yAXTPX6PVZBU1DFtFOwyJth8cwXenAKU.jpg?size=50x50&quality=96&crop=144,144,1152,1152&ava=1',
             GroupsName: 'твоя папка с сохранёнками',
             Description: 'Жарко становится...\n' + 'Не анонимно, пожалуйста.',

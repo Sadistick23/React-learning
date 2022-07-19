@@ -9,7 +9,8 @@ const CreatPost = (props) => {
                                                                   images={post.images}
                                                                   LikeCount={post.LikeCount}
                                                                   CommentCount={post.CommentCount}
-                                                                  RepostCount={post.RepostCount} /> )
+                                                                  RepostCount={post.RepostCount}
+                                                                  key={post.id}/> )
 
     let newPostElement = React.createRef();
 

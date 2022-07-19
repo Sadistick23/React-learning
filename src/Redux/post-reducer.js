@@ -29,7 +29,7 @@ let initializationState = {
 
 const postReducer = (state = initializationState, action) => {
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
             let newPost = {
                 id: 7,
                 namePost: state.PostElements.newPostText,
@@ -39,12 +39,20 @@ const postReducer = (state = initializationState, action) => {
                 CommentCount: 0,
                 RepostCount: 0
             };
-            state.PostData.push(newPost);
-            state.PostElements.newPostText = '';
-            return state;
-        case UPDATE_NEW_POST_TEXT:
-            state.PostElements.newPostText = action.newText;
-            return state;
+            let stateCopy = {...state};
+            stateCopy.PostData = [...state.PostData];
+            stateCopy.PostData.push(newPost);
+            stateCopy.PostElements = {...state.PostElements};
+            stateCopy.PostElements.newPostText = '';
+            return stateCopy;
+        }
+        case UPDATE_NEW_POST_TEXT: {
+            let stateCopy = {...state};
+            stateCopy.PostData = [...state.PostData];
+            stateCopy.PostElements = {...state.PostElements};
+            stateCopy.PostElements.newPostText = action.newText;
+            return stateCopy;
+        }
         default:
             return state;
     }

@@ -8,12 +8,16 @@ const Dialogs = (state) => {
 
     let newMessageElement = React.createRef();
 
-    let MessageElements = state.MessageData.map ( message => <Messages msg={message.msg} who={message.who}/>)
-    let UsersElements = state.UsersData.map ( user => <Users name={user.name} id={user.id} avatar={user.avatar}/>)
+    let MessageElements = state.MessageData.map ( message => <Messages msg={message.msg}  key={message.id} who={message.who}/>)
+    let UsersElements = state.UsersData.map ( user => <Users name={user.name} key={user.id} id={user.id} avatar={user.avatar}/>)
 
 
     let onSendMessageClick = () => {
-        state.sendMessage();
+        if ( state.newMessageText === '' ) {
+            alert("Message clear")
+        } else {
+            state.sendMessage();
+        }
     }
 
     let onMessageChange = (event) => {
@@ -24,7 +28,7 @@ const Dialogs = (state) => {
     let onEnterPress = (event) => {
         if (event.keyCode === 13 && event.shiftKey === false) {
             event.preventDefault();
-            if ( state.MessageElement.newMessageText === '' ) {
+            if ( state.newMessageText === '' ) {
                 alert( "Message clear" )
             } else {
                 state.sendMessage();
@@ -47,7 +51,7 @@ const Dialogs = (state) => {
                                       className={dialogs.messages__textarea}
                                       onChange={onMessageChange}
                                       onKeyDown={onEnterPress}
-                                      value={ state.MessageElement.newMessageText }
+                                      value={ state.newMessageText }
                                       placeholder="Write message..." required/>
                     <a className={dialogs.messages__button} onClick={ onSendMessageClick }><img src="https://img.icons8.com/material-outlined/344/filled-sent.png"/></a>
                 </div>

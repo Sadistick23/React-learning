@@ -1,12 +1,12 @@
 import React from "react";
 import nav from './Navigation.module.css';
 import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
 
 const Navigation = (props) => {
 
-    let FriendsElement = props.friendsPage.map(friends => <div className={nav.friends__bar}><a
-        href="#"><img src={friends.FriendsAvatar}/></a></div>)
-
+    let FriendsElement = props.friendsPage.map(friends => <Friends friends={friends.FriendsAvatar} key={friends.id}
+                                                                   id={friends.id}/>)
     return (
         <nav className={nav.nav}>
             <div className={nav.nav__border}>
@@ -17,6 +17,10 @@ const Navigation = (props) => {
                 <NavLink to="/dialogs"
                          className={navData => navData.isActive ? nav.active : nav.nav__link}>
                     <div className={nav.design}>Messages</div>
+                </NavLink>
+                <NavLink to="/users"
+                         className={navData => navData.isActive ? nav.active : nav.nav__link}>
+                    <div className={nav.design}>Users</div>
                 </NavLink>
                 <NavLink to="/music"
                          className={navData => navData.isActive ? nav.active : nav.nav__link}>

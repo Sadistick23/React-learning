@@ -7,16 +7,16 @@ let mapStateToProps = (state) => {
     return {
         MessageData: state.MessagesPage.MessageData,
         UsersData: state.MessagesPage.UsersData,
-        MessageElement: state.MessagesPage.MessageElement,
+        newMessageText: state.MessagesPage.newMessageText,
     }
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        onSendMessageClick: () => {
+        sendMessage: () => {
             dispatch(addMessageActionCreater());
         },
 
-        onMessageChange: (body) => {
+        updateNewMessageBody: (body) => {
             dispatch(updateNewMessageTextActionCreater(body));
         }
     }
